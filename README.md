@@ -13,9 +13,18 @@ This repository contains the implementation of a **hybrid modular model** for fo
 - Outputs integrated into a discretized transport solver for 24h forecasts  
 
 ## Requirements
-- Python 3.11+
-- Main libraries: `numpy`, `scipy`, `pandas`, `scikit-learn`, `matplotlib`, `geopandas`
+- Python 3.12.3
+- Main libraries: `numpy`, `scipy`, `pandas`, `scikit-learn`, `matplotlib`, `contextily`, `tensorflow`, `keras`, `joblib`
 
-Install dependencies:
-```bash
-pip install -r requirements.txt
+### ⚙️ Configuration
+
+⚠️ **Important:** Before running the model, you must edit the configuration section in  
+`superficie_modelo_5_1.py` and verify that all file paths are correct. The following inputs must be properly linked:
+
+- FNN models for wind field forecasting  
+- FNN model for mobile source emissions  
+- ProAire and DENUE emission inventories  
+- Meteorological data (INIFAP/RUOA)  
+- SINAICA air quality data (for validation)  
+
+Paths can be modified directly in the script `superficie_modelo_5_1.py`.
